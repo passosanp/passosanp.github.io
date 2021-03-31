@@ -258,6 +258,24 @@ label span {
     background-color: var(--corBackgroundContainerDark);
 }
 
+@keyframes aumentarLargura {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes aumentarAltura {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
 
 /* @MEDIA */
 
@@ -280,7 +298,9 @@ label span {
         border-radius: 15%;
     }
     main .coluna section {
-        border: 1px solid #e4e4df;
+        border: 1px solid transparent;
+        padding: 20px;
+        position: relative;
     }
     footer nav .info-contato li {
         margin: 0 0 10px;
@@ -311,5 +331,32 @@ label span {
         top: -5px;
         box-shadow: 0px 3px 3px 3px rgba(119, 119, 118, 0.233);
         border-radius: 20%;
+    }
+    main .coluna section .baixo-esquerda {
+        bottom: -2px;
+        right: -2px;
+        animation-name: aumentarLargura, aumentarAltura;
+        animation-duration: 1s, 1s;
+        animation-delay: 4s, 5s;
+        animation-fill-mode: forwards;
+        border-bottom-color: #888a8df1;
+        border-left-color: #888a8df1;
+    }
+    main .coluna section .topo-direita {
+        top: -2px;
+        left: -2px;
+        animation-name: aumentarLargura, aumentarAltura;
+        animation-duration: 1s, 1s;
+        animation-delay: 2s, 3s;
+        animation-fill-mode: forwards;
+        border-top-color: #888a8df1;
+        border-right-color: #888a8df1;
+    }
+    main .coluna section span {
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        border: 2px solid transparent;
     }
 }
