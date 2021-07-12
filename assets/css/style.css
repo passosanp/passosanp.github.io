@@ -143,9 +143,17 @@ footer .linha-redes-sociais {
 
 /* PAGINA INICIAL */
 
-main .coluna section {
+main .coluna.coluna-direita section {
     border-bottom: 1px solid rgba(211, 206, 206, 0.61);
-    margin: 0 0 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    min-height: 188px;
+    color: var(--cortextoPreta);
+}
+
+main .coluna.coluna-esquerda section{
+    border-bottom: 1px solid rgba(211, 206, 206, 0.61);
+    margin-bottom: 40px;
     padding: 20px;
     min-height: 188px;
     color: var(--cortextoPreta);
@@ -225,7 +233,6 @@ label span {
 
 .ativar-dark:checked~.dark-mode label span {
     background-color: var(--corBackgroundSecundaria);
-    /* margin-left: 21px; */
     transform: translateX(21px);
     transition: all ease .3s;
 }
@@ -297,11 +304,17 @@ label span {
         max-width: 260px;
         border-radius: 15%;
     }
+
+    section.perfil-pro{
+        margin-bottom: 35px;
+    }
+
     main .coluna section {
         border: 1px solid transparent;
         padding: 20px;
         position: relative;
     }
+
     footer nav .info-contato li {
         margin: 0 0 10px;
     }
